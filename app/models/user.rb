@@ -7,4 +7,15 @@ class User < ActiveRecord::based
 
   validates_uniqueness_of :email, case-sensitive: false
 
+  def self.authenticate_with_credentials(email, password)
+    @user = self.find_by_email(email)
+
+    if @user && @user.authenticate(password)
+      return @user
+    else
+      return nil
+    end
+
+  end
+
 end
