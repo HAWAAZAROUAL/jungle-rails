@@ -64,10 +64,8 @@ main section.categories-show {
       // for the soldout badge
       aside.soldOut {
         position: absolute;
-        display: flexbox;
-        flex-direction: row-reverse;
         top: 0;
-        right: 0;
+        left: 0;
         padding: 10px;
         background-color:rgb(233, 102, 102);
         color: white;
